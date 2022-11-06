@@ -6,5 +6,5 @@ router.get("/", controller.get);
 router.post("/", controller.post);
 router.delete("/UserId", controller.delete);
 router.patch("/UserId", controller.patch);
-
+  
 module.exports = router;

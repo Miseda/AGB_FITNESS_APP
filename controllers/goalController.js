@@ -36,31 +36,42 @@ module.exports = {
 
     //TO DELETE THE GOALS
 
-    delete: ("/:goalId", async (req, res) => {
+    delete:  async (req, res) => {
+
+        const ID = req.query.goalId
         try{
-            const Goal = require('../models/goalModel');
-            const removedGoal = await Goal.deleteOne({_id: req.params.goalId});
-            res.json(removedGoal);
+            const removedGoal = await Goal.deleteOne({_id: ID});
+            res.redirect('/goals/viewGoals');
         }catch (err){
             res.json({ message : err });
         }
     
-    }),
+    },
     
 
      //TO UPDATE THE GOALS
 
-     patch: ("/:goalId", async (req, res) => {
+     patch: async (req, res) => {
+
+
+        // console.log(req.query)
+
+       const title = req.query.title;
+       const description = req.query.description 
+        const ID = req.query.goalId
+        
         try{
-            const Goal = require('../models/goalModel');
-            const updatedGoal = await Goal.updateOne({_id: req.params.goalId},
-                {$set:{title: req.body.title , description: req.body.description}});
-            res.json(updatedGoal);
+            const updatedGoal = await Goal.updateOne({_id: ID},
+                {$set:
+                    {title , 
+                    description
+             }});
+            res.redirect('/goals/viewGoals');
         }catch (err){
             res.json({ message : err });
         }
     
-    }),
+    },   
 
     add: (req, res) => {
         res.render('addGoals');
@@ -68,8 +79,19 @@ module.exports = {
 
     view:async (req, res) => {
 
-        const goals = await Goal.find();
+        var goals = await Goal.find();
+        // goals = goals.map(g => g.toObject())
+
         res.render('viewGoals',{goals});
+    },
+
+    showUpdate: async (req,res) => {
+
+        const ID = req.query.goalId
+        const goal = await  Goal.findOne({_id:ID});
+
+        res.render('updateGoals',{goal})
+
     }
 
     

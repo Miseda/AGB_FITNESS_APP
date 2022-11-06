@@ -12,33 +12,24 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a href="/goals/addGoals" type="button" class="btn btn-primary"> ADD GOAL <span class="sr-only">(current)</span></a>
+    <h1> Update goal</h1>
+    <form action="/goals/update" method="GET" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control"  value = "{{goal.title}}" id="title" name="title" placeholder="Title">
     </div>
-  </div>
-</nav>
 
-<h1> All goals <h1>
-{{#goals}}
-<div class="card">
-  <div class="card-body">
-    <p>{{title}}</p>
-    <h3>{{description}}</h3>
-    <h3>{{entryDate}}</h3>
-    <a href="/goals/updateGoal?goalId={{_id}}" type="button" class="btn btn-success" >Update</a>
-    <a href="/goals/item?goalId={{_id}}" type="button" class="btn btn-danger" >Delete</a>
- 
-  </div>
-</div>
-{{/goals}}
+    <div class="form-group">
+        <label for="Description">Description </label>
+        <input type="text" class="form-control" value = "{{goal.description}}" id="description" name="description" placeholder="Description">
+    </div>
+
+    <input type="text" class="form-control" value = "{{goal._id}}" id="description" name="goalId" placeholder="Description" hidden>
 
 
+     <button type="submit" class="btn btn-success">UPDATE</button>
+    </form>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

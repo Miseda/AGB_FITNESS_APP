@@ -4,13 +4,18 @@ const app = express();
 const bodyParser = require('body-parser');
 const mustache = require('mustache-express');
    
+   
+// app.use(express.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json()); // To convert into JSON to allow the use of POST
 
 app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
 app.set('view engine', 'mustache');
 app.set("views", __dirname + "/views");
-app.use(bodyParser.json()); // To convert into JSON to allow the use of POST
-app.use(express.urlencoded({extended: true}));
+
+
+
 
 //CONNECTION TO MONGO DB
 const uri = 'mongodb+srv://agb_fitness:1234@agb.okldzql.mongodb.net/?retryWrites=true&w=majority'
