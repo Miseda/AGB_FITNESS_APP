@@ -4,9 +4,8 @@ module.exports = {
     
     //TO SHOW THE GOALS
 
-    get: async (req, res) => {
-
-        try {
+    get: async (req, res) => {       
+        try {      
           
             const goals = await Goal.find();
             res.json(goals);

@@ -1,8 +1,8 @@
+const Account = require('../models/userModel');
 module.exports = {
     get: async (req, res) => {
 
         try {
-            const Account = require('../models/userModel');
             const accounts = await Account.find();
             res.json(accounts);
         } catch (err){
@@ -12,7 +12,6 @@ module.exports = {
     },
 
     post: async (req,res)  => {
-        const Account = require('../models/userModel');
         const account = new Account({
             email: req.body.email,
             password: req.body.password,
@@ -20,7 +19,7 @@ module.exports = {
         
         try {
             const savedUser = await account.save();
-            res.json (savedUser);
+            res.redirect('/user/login');
         } catch (err){
             res.json({ message : err });
         }
@@ -29,7 +28,6 @@ module.exports = {
 
     delete: ("/:UserId", async (req, res) => {
         try{
-            const Account = require('../models/userModel');
             const removedAccount = await Account.remove({_id: req.params.goalId});
             res.json(removedAccount);
         }catch (err){
@@ -40,7 +38,6 @@ module.exports = {
 
     patch: ("/:UserId", async (req, res) => {
         try{
-            const Account = require('../models/userModel');
             const updatedAccount = await Account.updateOne({_id: req.params.goalId},
                 {$set:{ password: req.body.password}});
             res.json(updatedAccount);
@@ -48,7 +45,15 @@ module.exports = {
             res.json({ message : err });
         }
     
-    })
+    }),
+
+    login: async (req, res) => {
+        res.render('login');
+    },
+
+    signUp: async (req, res) => {
+        res.render('signUp');
+    },
 
 
 
