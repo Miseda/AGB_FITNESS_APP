@@ -1,4 +1,5 @@
 const Account = require('../models/userModel');
+
 module.exports = {
     get: async (req, res) => {
 
@@ -12,12 +13,16 @@ module.exports = {
     },
 
     post: async (req,res)  => {
-        const account = new Account({
-            email: req.body.email,
-            password: req.body.password,
-        });
         
         try {
+            // const salt = await bcrypt.genSalt()
+            // const hashedPassword = await bcrypt.hash(req.body.password, salt)
+            // console.log(salt)
+            // console.log(hashedPassword)
+            const account = new Account({
+                email: req.body.email,
+                password: req.body.password,
+            });
             const savedUser = await account.save();
             res.redirect('/user/login');
         } catch (err){
