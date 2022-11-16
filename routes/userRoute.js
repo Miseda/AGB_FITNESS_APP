@@ -15,5 +15,8 @@ router.get("/signUp",controller.signUp);
 //To add user to the database
 router.post("/signedUp", controller.post); 
 
+//To view the aboutUs page
+router.get("/aboutUs",controller.aboutUs);
+
 
 module.exports = router;

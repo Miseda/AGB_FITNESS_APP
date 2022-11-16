@@ -16,6 +16,14 @@
     width: 100vh;
 }
 
+.about{
+    width: 80%;
+}
+
+.about2{
+    width: 80%;
+    margin-top: 20px;
+}
 .right-div {
     padding: 15px;
     position: fixed;
@@ -26,7 +34,7 @@
     height: 100vh;
     width: 45vw;
     z-index: 2;
-    background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)), url(./../pics/login.jpg);
+    background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)), url(./../pics/aboutUs.jpg);
     background-size: 800px 850px;
 }
 

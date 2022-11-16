@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+* {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 4px;
+}
+
+.container {
+    margin: 0 5em;
+}
+
+.row-container {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    width: 100vh;
+}
+
+.right-div{
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-left: auto;
+    flex: 1;
+    height: 100vh;
+    width: 70vw;
+    z-index: 2;
+    background-size: 800px 850px;
+    
+}
+
+.sidebar{
+    background-color: #F7DBC9;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+}
+
+.empty{
+    padding: 15px;
+}
+
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    float: right;
+    width: 120px;
+    height: 50px;
+    border-radius: 3px;
+    margin-top: 30px;
+  }
+
+.goalCard{
+    margin-top: 150px;
+}
+
+.heading{
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.titles{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.card{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    background-color: #555555;
+}
+
+.card-buttons{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    float: right;
+    
+}
+
+#delete{
+    margin-top: 10px;
+}
+
+.logo a img {
+    /* width: 180px; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+   
+}
+
