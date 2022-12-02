@@ -18,5 +18,10 @@ router.post("/signedUp", controller.post);
 //To view the aboutUs page
 router.get("/aboutUs",controller.aboutUs);
 
+//To view the categories page
+router.get("/categories",controller.categories);
+
+//To view the categories page
+router.get("/categoriesTools",controller.categoryTools);
 
 module.exports = router;

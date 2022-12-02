@@ -32,7 +32,7 @@
 
 .sidebar{
     background-color: #F7DBC9;
-    padding: 15px;
+    padding: 30px;
     height: 100vh;
     position: fixed;
     left: 0;
@@ -50,11 +50,14 @@
     width: 120px;
     height: 50px;
     border-radius: 3px;
-    margin-top: 30px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin: 50px 120px;
   }
 
 .goalCard{
-    margin-top: 130px;
+    margin-top: 167px;
+    margin-right: 100px;
 }
 
 .heading{
@@ -89,11 +92,10 @@
 }
 
 .logo a img {
-    /* width: 180px; */
+    width: 150px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 45%;
    
 }
 
@@ -102,7 +104,7 @@
     font-size: 50px;
     margin-bottom: 50px;
     text-align: center;
-    margin-top: 24px;
+    margin-top: 10px;
 }
 
 .categories{
@@ -160,3 +162,31 @@
     width: 25px;
     margin-left: 8px;
 }
+
+form button {
+    background-color: #F7DBC9;
+    color: black;
+    border: 1px solid rgb(142, 138, 138);
+    padding: 14px 20px;
+    margin: 8px 0;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70%;
+}
+
+input[type=text], select {
+    width: 70%;
+    padding: 15px 20px;
+    margin: 50px 0;
+    display: block;
+    border: 1px solid rgb(179, 171, 171);
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #F7DBC9;
+    
+  }
+  
+ 
+  
+

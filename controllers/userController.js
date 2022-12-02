@@ -65,5 +65,13 @@ module.exports = {
         res.render('aboutUs');
     },
 
+    categories: async (req, res) => {
+        res.render('services');
+    },
+
+    categoryTools: async (req, res) => {
+        res.render('servicesTools');
+    },
+
 
 }
