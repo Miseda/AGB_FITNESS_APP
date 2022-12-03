@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+font-family: 'Montserrat', sans-serif;
+letter-spacing: 4px;
+}
+
+.logo a img {
+width: 150px;
+margin: 0px 50px;
+}
+
+.header {
+display: flex;
+flex-direction: row;
+top: 0;
+left: 0;
+height: 140px;
+width: 100%;
+margin-bottom: 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+}
+
+.nav ul.nav-list{
+    list-style-type: none;   
+}
+
+.nav ul li{
+    display: inline-block;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+    color: black;
+    margin-left: 50px;
+    margin-top: 20px;
+    display: inline-block;
+    /* padding-top: 20px; */
+    position: relative;
+    overflow: hidden;
+}
+
+.nav ul li a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: black;
+    bottom: 0px;
+    left:-100%;
+    transition: all .3s ease-in-out;
+
+}
+
+.disabled {
+    pointer-events: none;
+    }
+
+.nav ul li a:hover:after{
+    left: 0;
+}
+
+.nav ul li a button{
+    width: 105px;
+    height: 35px;
+    font-weight: 700;
+    border-radius: 3px;
+    box-shadow: inset black;
+    margin-right: 50px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.heading1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading2{
+    text-align: center;
+    background-color: #F7DBC9;
+    margin-bottom: 20px;
+    column-count: 2;
+}
+
+.cardBody{
+    text-align: center;
+    column-count: 2;
+    column-gap: 40px;
+}
+
+.buttons{
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.buttons a button{
+
+    text-align: center;
+    width: 50%;
+    height: 35px;
+    /* font-weight: 700; */
+    border-radius: 1px;
+    margin-right: 50px;
+    border-radius: 2px;
+    background-color: #F7DBC9;
+    color: black;
+    border: 1px solid #555555;
+    margin: 10px 0px;
+    
+
+}
+
+input[type="name"],
+input[type="email"]{
+    width: 70%;
+    padding: 15px 20px;
+    margin: 50px 165px;
+    display: block;
+    border: 1px solid rgb(179, 171, 171);
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #F7DBC9;
+}
+
+form button {
+    background-color: #F7DBC9;
+    color: black;
+    border: 1px solid rgb(142, 138, 138);
+    padding: 14px 20px;
+    margin: 8px 0;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.addCard{
+    text-align: center;
+    border: 1px solid rgb(142, 138, 138);
+    padding: 20px;
+    border-radius: 3px;
+}
+
+/* .form-center {
+    display:flex;
+    justify-content: center;
+  } */
+
+

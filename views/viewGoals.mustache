@@ -30,9 +30,9 @@
             CATEGORIES
           </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">Action</button>
-          <button class="dropdown-item" type="button">Another action</button>
-          <button class="dropdown-item" type="button">Something else here</button>
+          <button class="dropdown-item" type="button">FITNESS</button>
+          <button class="dropdown-item" type="button">NUTRITION</button>
+          <button class="dropdown-item" type="button">MENTAL HEALTH</button>
         </div>
         </div>
 
@@ -42,7 +42,7 @@
       <div class="sidebar-btn1">
 
       <a href="#"><img src="./../pics/Add.png" alt="Add picture" class="add"></a>
-       <a href="/goals/addGoals" >ADD GOAL</a>
+       <a href="/goals/addGoals" type="button" class="addGoalBtn" >ADD GOAL</a>
 
       
       </div>
@@ -50,7 +50,7 @@
       <div class="sidebar-btn2">
 
       <a href="#"><img src="./../pics/View.png" alt="Add picture" class="view"></a>
-       <a href="/goals/viewGoals" >VIEW GOALS</a>
+       <a href="/goals/viewGoals" class="viewGoalBtn">VIEW GOALS</a>
 
       
       </div>
@@ -67,6 +67,10 @@
       <div class="goalCard">
     
         <p class="heading"> Goals </p>
+
+        <div class="noGoal" >
+        <h3>No goals added<h3>
+        </div>
           
         {{#goals}}
 
@@ -100,5 +104,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
+
 
 </html>

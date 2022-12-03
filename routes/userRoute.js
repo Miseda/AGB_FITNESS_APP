@@ -21,7 +21,22 @@ router.get("/aboutUs",controller.aboutUs);
 //To view the categories page
 router.get("/categories",controller.categories);
 
-//To view the categories page
+//To view the manager categories page
 router.get("/categoriesTools",controller.categoryTools);
+
+//To view the manager page
+router.get("/manager",controller.manager);
+
+//To view the add staff page
+router.get("/addStaff",controller.managerAdd);
+
+//To add staff to the database
+router.post("/signedStaff", controller.postManager);
+
+//To view delete staff page 
+router.get("/deleteStaff", controller.managerDelete);
+
+//To delete a user to the database
+router.post("/deletedStaff", controller.delete);
 
 module.exports = router;

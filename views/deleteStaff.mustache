@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGB</title>
+
+    <link rel="stylesheet" href="./../css/manager.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+                        <a href="#"><img src="./../pics/logo.png" alt = "Logo"></a>
+                </div>
+
+        <nav class="nav" style="margin-left: auto;">
+            <ul class="nav-list">
+
+                 <div class="dropdown">
+                    <li><a href="/user/manager"> ACCOUNTS <i class="fa fa-caret-down"></i></a></li>
+            
+                    </div>
+                </div> 
+
+
+                <div class="dropdown">
+                    <li><a href="/user/categoriesTools"> CATEGORIES <i class="fa fa-caret-down"></i></a></li>
+            
+                    </div>
+                </div> 
+
+
+                <div class="dropdown">
+                <li><a class="login-btn disabled" href="login.php"><button>LOGOUT</button></a></li>
+                </div>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <div class= "container">
+
+        <div class="heading1">
+        <h1>DELETE STAFF</h1>
+        </div>
+
+        
+        <div class="addCard">
+            <div class="form-center">
+
+                <form action="/user/deletedStaff" method="POST" >
+
+                            <input type="name" placeholder="Staff name" name="name" required>
+
+                        <button type="submit">DELETE STAFF</button>
+
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

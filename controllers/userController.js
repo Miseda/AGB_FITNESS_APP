@@ -20,6 +20,7 @@ module.exports = {
             const hashedPassword = await bcrypt.hash(req.body.password, 10)
             console.log(hashedPassword)
             const account = new Account({
+                name: req.body.name,
                 email: req.body.email,
                 password: hashedPassword,
             });
@@ -31,10 +32,13 @@ module.exports = {
        
     },
 
-    delete: ("/:UserId", async (req, res) => {
+    delete: ( async (req, res) => {
+
+        const name = req.body.name
+
         try{
-            const removedAccount = await Account.remove({_id: req.params.goalId});
-            res.json(removedAccount);
+            const removedAccount = await Account.deleteOne({name: name});
+            res.redirect('/user/manager');
         }catch (err){
             res.json({ message : err });
         }
@@ -66,12 +70,47 @@ module.exports = {
     },
 
     categories: async (req, res) => {
-        res.render('services');
+        res.render('categories');
     },
 
     categoryTools: async (req, res) => {
-        res.render('servicesTools');
+        res.render('categoriesTools');
     },
+
+    manager: async (req, res) => {
+
+        var user = await Account.find();
+        res.render('manager', {user});
+    },
+
+    managerAdd: async (req, res) => {
+
+        var user = await Account.find();
+        res.render('addStaff');
+    },
+
+    postManager: async (req,res)  => {
+        
+        try {
+            const account = new Account({
+                name: req.body.name,
+                email: req.body.email,
+
+            });
+            const savedUser = await account.save();
+            res.redirect('/user/manager');
+        } catch (err){
+            // res.json({ message : err });
+        }
+       
+    },
+
+    managerDelete: async (req, res) => {
+
+        var user = await Account.find();
+        res.render('deleteStaff');
+    },
+
 
 
 }

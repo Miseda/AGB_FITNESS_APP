@@ -138,6 +138,7 @@
     margin-bottom: 10%;
 }
 
+input[type="name"],
 input[type="email"],
 input[type="password"] {
     width: 70%;
