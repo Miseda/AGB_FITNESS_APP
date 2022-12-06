@@ -25,11 +25,18 @@ initializePassport (
 
 app.use(methodOverride("_method"))
 app.use(flash())
+
+
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    secret: "secret",
     saveUninitialized: true,
+    // cookie: {secure: true},
     resave: false,
 }))
+
+
+
+app.use(cookieParser());
 app.use(passport.initialize())
 app.use(passport.session())
 
