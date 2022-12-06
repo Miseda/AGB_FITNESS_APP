@@ -27,11 +27,15 @@ initializePassport (
 app.use(methodOverride("_method"))
 app.use(flash())
 
-
+app.set('trust proxy', 1);
 app.use(session({
     secret: "secret",
-    saveUninitialized: false,
+    saveUninitialized: true,
     resave: false,
+    maxAge: 1000 * 60 * 15,
+    cookie:{
+      secure: false
+           }
 }))
 
 
@@ -87,13 +91,22 @@ function checkNotAuthenticated(req,res,next){
     }
     next()
 }
-app.delete('/logout', function(req, res, next) {
-    req.logout(function(err) {
-      if (err) { return next(err); }
-      res.redirect('/login');
-    });
-  });
 
+
+
+app.delete('/logout', (req, res) => {
+    if (req.session) {
+      req.session.destroy(err => {
+        if (err) {
+          res.status(400).send('Unable to log out')
+        } else {
+            res.redirect('/login');
+        }
+      });
+    } else {
+      res.end()
+    }
+  })
 
 
 //CONNECTION TO MONGO DB
