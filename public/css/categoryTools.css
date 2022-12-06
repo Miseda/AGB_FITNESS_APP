@@ -66,12 +66,6 @@ h1 {
     text-decoration: none;
 }
 
-.btn6 :hover{
-    background-color: #F7DBC9;
-    color: black;
-    text-decoration: none;
-}
-
 .button img{
     width: 7%;
     float: left;
@@ -103,11 +97,6 @@ h1 {
     color: #F7DBC9;
 }
 
-.btn6 a{
-    text-decoration: none;
-    color: #F7DBC9;
-}
-
 
 .btn1 img{
     margin: -5px 0px;
@@ -121,11 +110,6 @@ h1 {
 
 
 .btn5 img{
-    margin: -8px -1px;
-    width: 6%;
-}
-
-.btn6 img{
     margin: -8px -1px;
     width: 6%;
 }
@@ -201,13 +185,14 @@ align-items: center;
 
 }
 
-.dropdown form button {
+form button {
     width: 120px;
     height: 35px;
     font-weight: 700;
     border-radius: 3px;
+    margin: 0px 200px;
     box-shadow: inset black;
-    margin-right: 50px;
+    margin-right: 60px;
     background-color: white;
     color: black;
     border: 2px solid #555555;

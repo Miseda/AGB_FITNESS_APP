@@ -21,23 +21,7 @@
                 <a href="#"><img src="./../pics/logo.png" alt="Logo"></a>
       </div>
 
-      <p class="heading1"> FITNESS </p>
-
-      <div class="categories">
-
-        <div class="dropdown">
-          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            CATEGORIES
-          </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">FITNESS</button>
-          <button class="dropdown-item" type="button">NUTRITION</button>
-          <button class="dropdown-item" type="button">MENTAL HEALTH</button>
-        </div>
-        </div>
-
-
-      </div>
+      <p class="heading1"> WELCOME </p>
 
 
       <div class="sidebar-btn2">
@@ -47,6 +31,14 @@
 
       
       </div>
+
+       <div class=" button5">
+
+            <form action="/logout?_method=DELETE" method= "POST">
+                        <button type="submit" class="logout">LOG OUT</button>
+            </form>
+                
+        </div>
     
 
     </div>
@@ -55,7 +47,6 @@
 
     <div class="right-div">
 
-      <button class="button button5">LOGOUT</button>
 
       <div class="goalCard">
     
@@ -67,11 +58,13 @@
              <input type="text" class="form-control"  value = "{{goal.title}}" id="title" name="title" placeholder="Title">
 
              <input type="text" class="form-control" value = "{{goal.description}}" id="description" name="description" placeholder="Description">
+
+              <input type="text" class="form-control" value = "{{goal.status}}" id="status" name="status" placeholder="Status">
         
               <input type="text" class="form-control" value = "{{goal._id}}" id="description" name="goalId" placeholder="Description" hidden>
             
 
-              <button type="submit" >UPDATE</button>
+              <button type="submit" class="update" >UPDATE</button>
 
             </form>
           </div>

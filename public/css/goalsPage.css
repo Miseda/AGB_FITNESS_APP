@@ -213,6 +213,33 @@ input[type=text], select {
     margin-top: 100px;
     margin: 100px 150px;
 }
+
+/* .addGoalForm{
+
+    background-color: #F7DBC9;
+    color: black;
+    border: 1px solid rgb(142, 138, 138);
+    padding: 14px 20px;
+    margin: 8px 0;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+
+} */
+
+/* .dropdown button {
+    width: 120px;
+    height: 35px;
+    font-weight: 700;
+    border-radius: 3px;
+    box-shadow: inset black;
+    margin-right: 50px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    
+} */
   
  
   

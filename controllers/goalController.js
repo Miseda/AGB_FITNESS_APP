@@ -1,5 +1,7 @@
 
 const Goal = require('../models/goalModel');
+const Category = require('../models/category');
+
 module.exports = {
     
     //TO SHOW THE GOALS
@@ -18,9 +20,14 @@ module.exports = {
     //TO SUBMIT THE GOALS
 
     post: async (req,res) => {
+        const category = await Category.findOne({_id:req.body.category});
+
+   
+        
         const goal = new Goal({
             title: req.body.title,
             description: req.body.description,
+            category
         });
 
         try {
@@ -36,7 +43,6 @@ module.exports = {
     //TO DELETE THE GOALS
 
     delete:  async (req, res) => {
-
         const ID = req.query.goalId
         try{
             const removedGoal = await Goal.deleteOne({_id: ID});
@@ -57,33 +63,40 @@ module.exports = {
 
        const title = req.query.title;
        const description = req.query.description 
+       const status = req.query.status
         const ID = req.query.goalId
         
         try{
             const updatedGoal = await Goal.updateOne({_id: ID},
                 {$set:
                     {title , 
-                    description
+                    description,status
              }});
             res.redirect('/goals/viewGoals');
         }catch (err){
             res.json({ message : err });
         }
     
-    },   
+    },    
+ 
+    add: async (req, res) => {
+        // var category = await Category.find(req.query.categoryId)
 
-    add: (req, res) => {
-        res.render('addGoals');
+
+        // res.render('addGoals',{category});
+        console.log("Lets see if it happens", req.query)
+        res.render('addGoals', {id: req.query.id});
     },
 
-    view:async (req, res) => {
+    view: async (req, res) => {
 
         var goals = await Goal.find();
-        // goals = goals.map(g => g.toObject())
+        const category = await Category.findOne({_id:req.body.category});
+        
 
         res.render('viewGoals',{goals});
     },
-
+  
     showUpdate: async (req,res) => {
 
         const ID = req.query.goalId

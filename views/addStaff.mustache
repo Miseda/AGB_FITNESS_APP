@@ -34,10 +34,15 @@
                     </div>
                 </div> 
 
-
-                <div class="dropdown">
-                <li><a class="login-btn disabled" href="login.php"><button>LOGOUT</button></a></li>
+                 <div class="dropdown">
+                <li><a>
+                    <form action="/logout?_method=DELETE" method= "POST">
+                                <button type="submit">LOG OUT</button>
+                    </form>
+                
+                </a></li>
                 </div>
+
             </ul>
         </nav>
 
@@ -54,11 +59,16 @@
         <div class="addCard">
             <div class="form-center">
 
-                <form action="/user/signedStaff" method="POST" >
+                <form action="/user/signedStaff" method="POST" class="addForm" >
 
                             <input type="name" placeholder="Staff name" name="name" required>
 
                             <input type="email" placeholder="Email address" name="email" required>
+
+                            <div>
+                            <input type="checkbox" class="box-size" name="staff"  value = "staff"> Staff 
+                            </div>
+
 
 
                         <button type="submit">ADD STAFF</button>

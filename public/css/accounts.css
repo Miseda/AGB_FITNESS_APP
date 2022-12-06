@@ -10,7 +10,7 @@ width: 150px;
 margin: 0px 50px;
 }
 
-.header {
+/* .header {
 display: flex;
 flex-direction: row;
 top: 0;
@@ -73,7 +73,7 @@ align-items: center;
 .dropdown {
     position: relative;
     display: inline-block;
-}
+} */
 
 .heading1{
     text-align: center;
@@ -128,29 +128,6 @@ input[type="email"]{
     background-color: #F7DBC9;
 }
 
-.addForm button {
-    background-color: #F7DBC9;
-    color: black;
-    border: 1px solid rgb(142, 138, 138);
-    padding: 14px 20px;
-    margin: 8px 0;
-    font-weight: 700;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 50%;
-}
-
-.deleteForm button {
-    background-color: #F7DBC9;
-    color: black;
-    border: 1px solid rgb(142, 138, 138);
-    padding: 14px 20px;
-    margin: 8px 0;
-    font-weight: 700;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 50%;
-}
 
 .addCard{
     text-align: center;
@@ -159,11 +136,14 @@ input[type="email"]{
     border-radius: 3px;
 }
 
+/* .form-center {
+    display:flex;
+    justify-content: center;
+  } */
 
-
-.dropdown button {
-    width: 120px;
-    height: 35px;
+/* .dropdown button {
+    width: 180px;
+    height: 30px;
     font-weight: 700;
     border-radius: 3px;
     box-shadow: inset black;
@@ -172,5 +152,5 @@ input[type="email"]{
     color: black;
     border: 2px solid #555555;
     
-}
+} */
 

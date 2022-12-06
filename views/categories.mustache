@@ -23,8 +23,16 @@
                 <nav class="nav" style="margin-left: auto;">
                     <ul class="nav-list">
 
+
                         <div class="dropdown">
-                            <button class="button button5">LOGOUT</button> 
+
+                            <li><a>
+                            <form action="/logout?_method=DELETE" method= "POST">
+                                <button type="submit">LOG OUT</button>
+                            </form>
+                            
+                            </a></li>
+
                         </div>
                     </ul>
                 </nav>
@@ -42,34 +50,21 @@
             </div>
 
             <div class="all-buttons">
-            
-                <div class="btn1">
-                    <a href="/goals/viewGoals">
-                    <button type="button" class="button" >
-                        <span class="btn-text">FITNESS</span>
-                        <span class="btn-icon"><img src="./../pics/fitness.png" alt = "travel"></span>
-                    </button>
-                    </a>
-                </div>
 
-                <div class="btn3">
-                    <a href="#">
+                {{#categories}} 
+
+                 <div class="btn1">
+                    <a href="/goals/addGoals?id={{_id}}">
                         <button type="button" class="button" >
-                            <span class="btn-text">NUTRITION</span>
-                            <span class="btn-icon"><img src="./../pics/nutrition.png" alt = "travel"></span>
+                            <span class="btn-text"> {{title}} </span>
+                            <span class="btn-icon"><img src="./../pics/fitness.png" alt = "travel"></span>
                         </button>
                     </a>
                 </div>
 
+                 {{/categories}} 
 
-                <div class="btn5">
-                    <a href="#">
-                        <button type="button" class="button" >
-                            <span class="btn-text">MENTAL HEALTH</span>
-                            <span class="btn-icon"><img src="./../pics/mental.png" alt = "travel"></span>
-                        </button>
-                    </a> 
-                </div>         
+
             </div>
         </div>   
             

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGB</title>
-    <link rel="stylesheet" href="./../css/goalsPage.css">
+    <link rel="stylesheet" href="./../css/viewGoals.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
 </head>
@@ -21,28 +21,15 @@
                 <a href="#"><img src="./../pics/logo.png" alt="Logo"></a>
       </div>
 
-      <p class="heading1"> FITNESS </p>
-
-      <div class="categories">
-
-        <div class="dropdown">
-          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            CATEGORIES
-          </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">FITNESS</button>
-          <button class="dropdown-item" type="button">NUTRITION</button>
-          <button class="dropdown-item" type="button">MENTAL HEALTH</button>
-        </div>
-        </div>
+      <p class="heading1"> WELCOME </p>
 
 
-      </div>
+        
 
       <div class="sidebar-btn1">
 
       <a href="#"><img src="./../pics/Add.png" alt="Add picture" class="add"></a>
-       <a href="/goals/addGoals" type="button" class="addGoalBtn" >ADD GOAL</a>
+       <a href="/user/categories" type="button" class="addGoalBtn" >ADD GOAL</a>
 
       
       </div>
@@ -52,8 +39,18 @@
       <a href="#"><img src="./../pics/View.png" alt="Add picture" class="view"></a>
        <a href="/goals/viewGoals" class="viewGoalBtn">VIEW GOALS</a>
 
-      
       </div>
+
+
+      <div class=" button5">
+
+            <form action="/logout?_method=DELETE" method= "POST">
+                        <button type="submit">LOG OUT</button>
+            </form>
+                
+        </div>
+
+      
     
 
     </div>
@@ -62,7 +59,9 @@
 
     <div class="right-div">
 
-      <button class="button button5">LOGOUT</button>
+     
+
+       
 
       <div class="goalCard">
     
@@ -86,6 +85,16 @@
             <p>{{description}}<p>
             <p class="titles"> Date and time: </p>
             <p>{{entryDate}}</p>
+            {{#category}}
+
+            <p class="titles"> Category: </p> 
+            <p>{{title}}</p>
+            
+            {{/category}}
+            
+             <p class="titles"> Status: </p>
+            <p>{{status}}</p>
+
           </div>    
         </div>
         <div class = "empty"></div>

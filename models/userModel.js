@@ -14,6 +14,14 @@ const userSchema = mongoose.Schema({
     password: {
         type: String,
         default: "1234"
+    },
+
+    isStaff: {
+        type: Boolean,
+    },
+
+    isManager: {
+        type: Boolean,
     }
 
 })

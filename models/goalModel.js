@@ -13,8 +13,19 @@ const goalSchema = mongoose.Schema({
 
     description: {
         type: String,
-        required: true
-    }
+        required: true 
+    },
+    category: {
+        type: Object,
+      
+    },
+
+    status: {
+        type: String,
+        default: "Incomplete"
+    },
+
+
 
 })
 

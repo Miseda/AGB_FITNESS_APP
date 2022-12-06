@@ -34,7 +34,6 @@
                     </div>
                 </div> 
 
-
                  <div class="dropdown">
                 <li><a>
                     <form action="/logout?_method=DELETE" method= "POST">
@@ -53,18 +52,21 @@
     <div class= "container">
 
         <div class="heading1">
-        <h1>DELETE STAFF</h1>
+        <h1>ADD CATEGORY</h1>
         </div>
 
         
         <div class="addCard">
             <div class="form-center">
 
-                <form action="/user/deletedStaff" method="POST" class="deleteForm" >
+                <form action="/user/addedCategory" method="POST" class="addForm" >
 
-                            <input type="name" placeholder="Staff name" name="name" required>
+                            <input type="name" placeholder="Title" name="title" required>
 
-                        <button type="submit">DELETE STAFF</button>
+                            <input type="name" placeholder="Description" name="description" required>
+
+
+                        <button type="submit">ADD CATEGORY</button>
 
                 </form>
 
