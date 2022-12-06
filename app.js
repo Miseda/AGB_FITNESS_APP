@@ -133,9 +133,6 @@ app.use('/user', userRoute);
 
 
 
-app.get('/',(req, res) => {
-    res.send('This is the homepage.')
-})
 
 
 app.listen(3000, () => console.log('Connection succesful, server started on port 3000'));
