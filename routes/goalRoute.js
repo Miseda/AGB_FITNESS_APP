@@ -14,7 +14,7 @@ function checkAuthenticated(req,res,next){
 router.get("/",checkAuthenticated,controller.get);  
 
 //To delete the goal
-router.get("/item",checkAuthenticated,controller.delete);
+router.get("/delete",checkAuthenticated,controller.delete);
 
 //To update the goal
 router.get("/update",checkAuthenticated, controller.patch);   
@@ -24,7 +24,7 @@ router.get("/update",checkAuthenticated, controller.patch);
 //To Post to the view goals page.
 router.post("/addGoals",checkAuthenticated, controller.post); 
 
-//To Post to the view goals page.
+//To show to the add goals page.
 router.get("/addGoals",checkAuthenticated, controller.add); 
 
 //VIEW GOALS PAGE  

@@ -16,6 +16,7 @@ const Account = require('./models/userModel');
 const methodOverride = require('method-override')
 const cookieParser = require('cookie-parser')
 
+
 const initializePassport = require('./passport-config')
 initializePassport (
     passport, 
@@ -29,8 +30,7 @@ app.use(flash())
 
 app.use(session({
     secret: "secret",
-    saveUninitialized: true,
-    // cookie: {secure: true},
+    saveUninitialized: false,
     resave: false,
 }))
 

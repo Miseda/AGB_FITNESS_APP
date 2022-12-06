@@ -84,7 +84,6 @@ module.exports = {
 
 
         // res.render('addGoals',{category});
-        console.log("Lets see if it happens", req.query)
         res.render('addGoals', {id: req.query.id});
     },
 
